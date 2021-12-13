@@ -52,3 +52,21 @@ for (let i = 0; i < blockRowCount; i++) {
     blocks[i][j] = { x, y, ...blockInfo };
   }
 }
+
+// Draw ball on canvas
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
+    ctx.fillStyle = ball.visible ? '#0095dd' : 'transparent';
+    ctx.fill();
+    ctx.closePath();
+  }
+  
+  // Draw paddle on canvas
+  function drawPaddle() {
+    ctx.beginPath();
+    ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
+    ctx.fillStyle = paddle.visible ? '#0095dd' : 'transparent';
+    ctx.fill();
+    ctx.closePath();
+  }
