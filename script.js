@@ -23,10 +23,10 @@ const ball = {
 
 // Create paddle props
 const paddle = {
-  x: canvas.width / 2 - 40,
-  y: canvas.height - 20,
+  x: canvas.width / 2 - 20,
+  y: canvas.height - 10,
   w: 80,
-  h: 10,
+  h:`` 3,
   speed: 8,
   dx: 0,
   visible: true
@@ -34,11 +34,11 @@ const paddle = {
 
 // Create brick props
 const brickInfo = {
-  w: 70,
-  h: 20,
-  padding: 10,
-  offsetX: 45,
-  offsetY: 60,
+  w: canvas.width * (70 / 800),
+  h: canvas.height * (20 / 800),
+  padding: 5,
+  offsetX: 10.5,
+  offsetY: 30,
   visible: true
 };
 
@@ -74,7 +74,9 @@ function drawPaddle() {
 // Draw score on canvas
 function drawScore() {
   ctx.font = '30px Arial';
-  ctx.fillText(`Score: ${score}`, canvas.width - 170, 35);
+  ctx.fillText(`Score: ${score}`, canvas.width - 790, 35);
+  console.log(canvas.width)
+  console.log(canvas.length)
 }
 
 // Draw bricks on canvas
@@ -119,7 +121,7 @@ function moveBall() {
     ball.dy *= -1;
   }
 
-  // console.log(ball.x, ball.y);
+  console.log(ball.x, ball.y);
 
   // Paddle collision
   if (
