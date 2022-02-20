@@ -3,21 +3,22 @@ const closeBtn = document.getElementById('close-btn');
 const rules = document.getElementById('rules');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+let randomColor = Math.floor(Math.random()*16777215).toString(16);
 
 let score = 0;
   
 const brickRowCount = 9;
-const brickColumnCount = 5;
+const brickColumnCount = 4;
 const delay = 500; //delay to reset the game
 
 // Create ball props
 const ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
-  size: 10,
-  speed: 4,
-  dx: 4,
-  dy: -4,
+  size: 2,
+  speed: 2,
+  dx: 2,
+  dy: -2,
   visible: true
 };
 
@@ -26,7 +27,7 @@ const paddle = {
   x: canvas.width / 2 - 20,
   y: canvas.height - 10,
   w: 80,
-  h: 3,
+  h: 4,
   speed: 8,
   dx: 0,
   visible: true
@@ -35,10 +36,10 @@ const paddle = {
 // Create brick props
 const brickInfo = {
   w: canvas.width * (70 / 800),
-  h: canvas.height * (20 / 800),
-  padding: 5,
-  offsetX: 10.5,
-  offsetY: 30,
+  h: canvas.height * (50 / 800),
+  padding: 3,
+  offsetX: 19.5,
+  offsetY: 20,
   visible: true
 };
 
@@ -73,8 +74,8 @@ function drawPaddle() {
 
 // Draw score on canvas
 function drawScore() {
-  ctx.font = '30px Arial';
-  ctx.fillText(`Score: ${score}`, canvas.width - 790, 35);
+  ctx.font = '12px Arial';
+  ctx.fillText(`Score: ${score}`, canvas.width - 290, 15);
   console.log(canvas.width)
   console.log(canvas.length)
 }
@@ -232,6 +233,10 @@ function keyUp(e) {
     paddle.dx = 0;
   }
 }
+
+ 
+
+
 
 // Keyboard event handlers
 document.addEventListener('keydown', keyDown);
