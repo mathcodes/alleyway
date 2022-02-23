@@ -1,5 +1,5 @@
 # alleyway
-Just the like old school game for Gameboy.... along with millions of others! Break the bricks and keep the ball above you! This is a simple way to create this game, so it could use some more features, like tracking high scores, leveling up, increasing difficulty, different shaped and styled levels, and more. The
+Just the like old school game for Nintendo Gameboy.... along with millions of others! Break the bricks and keep the ball above you! This is a simple way to create this game, so it could use some more features, like tracking high scores, leveling up, increasing difficulty, different shaped and styled levels, and more. The
 
 PLEASE FEEL FREE TO COLLABORATE WITH YOUR IDEAS TO IMPROVE THIS!!!
 
